@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>行为型模式 · GitBook</title>
+        <title>单例模式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="模板方法.html" />
+    <link rel="next" href="../chapter2/" />
     
     
-    <link rel="prev" href="../chapter2/" />
+    <link rel="prev" href="原型模式.html" />
     
 
     </head>
@@ -212,9 +212,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../chapter1/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../chapter1/">
+                <a href="./">
             
                     
                     创建型模式
@@ -226,9 +226,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../chapter1/工厂模式.html">
+        <li class="chapter " data-level="1.3.1" data-path="工厂模式.html">
             
-                <a href="../chapter1/工厂模式.html">
+                <a href="工厂模式.html">
             
                     
                     工厂方法
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../chapter1/抽象工厂方法.html">
+        <li class="chapter " data-level="1.3.2" data-path="抽象工厂方法.html">
             
-                <a href="../chapter1/抽象工厂方法.html">
+                <a href="抽象工厂方法.html">
             
                     
                     抽象工厂方法
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../chapter1/建造者模式.html">
+        <li class="chapter " data-level="1.3.3" data-path="建造者模式.html">
             
-                <a href="../chapter1/建造者模式.html">
+                <a href="建造者模式.html">
             
                     
                     建造者模式
@@ -265,9 +265,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../chapter1/原型模式.html">
+        <li class="chapter " data-level="1.3.4" data-path="原型模式.html">
             
-                <a href="../chapter1/原型模式.html">
+                <a href="原型模式.html">
             
                     
                     原型模式
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="../chapter1/单例模式.html">
+        <li class="chapter active" data-level="1.3.5" data-path="单例模式.html">
             
-                <a href="../chapter1/单例模式.html">
+                <a href="单例模式.html">
             
                     
                     单例模式
@@ -309,9 +309,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../chapter3/">
             
-                <a href="./">
+                <a href="../chapter3/">
             
                     
                     行为型模式
@@ -323,9 +323,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="模板方法.html">
+        <li class="chapter " data-level="1.5.1" data-path="../chapter3/模板方法.html">
             
-                <a href="模板方法.html">
+                <a href="../chapter3/模板方法.html">
             
                     
                     模板方法
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="策略模式.html">
+        <li class="chapter " data-level="1.5.2" data-path="../chapter3/策略模式.html">
             
-                <a href="策略模式.html">
+                <a href="../chapter3/策略模式.html">
             
                     
                     策略模式
@@ -349,9 +349,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="观察者模式.html">
+        <li class="chapter " data-level="1.5.3" data-path="../chapter3/观察者模式.html">
             
-                <a href="观察者模式.html">
+                <a href="../chapter3/观察者模式.html">
             
                     
                     观察者模式
@@ -397,7 +397,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >行为型模式</a>
+        <a href=".." >单例模式</a>
     </h1>
 </div>
 
@@ -412,7 +412,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;">&#x884C;&#x4E3A;&#x578B;&#x6A21;&#x5F0F;</h1>
+                                <h1 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;-singleton">&#x5355;&#x4F8B;&#x6A21;&#x5F0F; Singleton</h1>
+<p>&#x4FDD;&#x8BC1;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x6B21;&#x3002;&#x901A;&#x5E38;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x5C06;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;&#x79C1;&#x6709;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x516C;&#x6709;&#x7684;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>ps&#xFF1A;&#x8FD9;&#x4E2A;&#x5C31;&#x4E0D;&#x8BB0;&#x7B14;&#x8BB0;&#x4E86;&#x3002;</p>
 
                                 
                                 </section>
@@ -440,12 +442,12 @@
 
             
                 
-                <a href="../chapter2/" class="navigation navigation-prev " aria-label="Previous page: 结构型模式">
+                <a href="原型模式.html" class="navigation navigation-prev " aria-label="Previous page: 原型模式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="模板方法.html" class="navigation navigation-next " aria-label="Next page: 模板方法">
+                <a href="../chapter2/" class="navigation navigation-next " aria-label="Next page: 结构型模式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -456,7 +458,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"行为型模式","level":"1.5","depth":1,"next":{"title":"模板方法","level":"1.5.1","depth":2,"path":"chapter3/模板方法.md","ref":"chapter3/模板方法.md","articles":[]},"previous":{"title":"结构型模式","level":"1.4","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/README.md","mtime":"2021-05-20T11:25:21.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-24T05:44:16.875Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"单例模式","level":"1.3.5","depth":2,"next":{"title":"结构型模式","level":"1.4","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[]},"previous":{"title":"原型模式","level":"1.3.4","depth":2,"path":"chapter1/原型模式.md","ref":"chapter1/原型模式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/单例模式.md","mtime":"2021-05-24T05:43:22.931Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-24T05:44:16.875Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
